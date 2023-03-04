@@ -1,0 +1,59 @@
+{
+    "Navigation": {
+        "logo": "LOGO",
+        "home": "HOME",
+        "news": "NEWS",
+        "profile": "PROFILE"
+    },
+    "Home":{
+        "Hero":{
+            "agency": "Welcome to Vinnytsia Agrncy",
+            "slogan": "Discover a place where you'll love to love.",
+            "description": "Be the first to get the best real estate deals before they hit the mass market! Hot foreclosure deals with one simple search!",
+            "btn": "More About us"
+        },
+        "Companies":{
+            "trust": "More than 15.000 trust Vinnytsia Agrncy",
+            "stars": "5-Star Rating (2k+ Reviews)"
+        },
+        "Guide":{
+            "HowWorks": "How it works?",
+            "Everything": "Everything you need to know when you want to buy, rent or sell- All in one place",
+            "BuyingBtn" : "Buying Guides",
+            "HowBuy": "How to buy",
+            "RentingBtn": "Renting Guides",
+            "HowRent": "How to rent",
+            "SellingBtn": "Selling Guides",
+            "HowSell": "How to sell",
+            "SeeFullGuides": "See Full Guides"
+        },
+        "Properties":{
+            "FeaturedProperties": "Featured Properties...",
+            "Everything": "Everything you need to know when looking for a new home!"
+        },
+        "Detalis":{
+            "title": "You've found a neighborhood you love.",
+            "sometext": "When you own a home, you commit to living in one location for a period of time.We are here to ensure that this will be a memorable experience for you.",
+            "HomesForSale": "Homes For Sale",
+            "PropertiesRent": "Properties Rent",
+            "HomesSold": "Homes Sold"
+        },
+        "GetStarted":{
+            "title": "Featured Properties",
+            "text": "Everything you need to know about houses!",
+            "btn": "Get Started NoW"
+        },
+        "Footer":{
+            "Products": "Products",
+            "Resource": "Resource",
+            "GetInTouch": "Get in touch",
+            "footerText": "You'll find your next home."
+        }
+    },
+    "NewsSlise": {"leng": "en"},
+    "NewsPage": {
+        "removeBtn": "Remove",
+        "moreBtn":  "Learn More"
+    }
+
+}
