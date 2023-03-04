@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import HomePage from "./pages/HomePages";
+import NewsPage from "./pages/NewsPage";
+import ProfilePage from "./pages/ProfilePage";
+import { Suspense, useEffect } from "react";
+import { fetchNewsApi } from "./reducer/newsSliсe";
+import { useDispatch } from "react-redux";
+
+
 
 function App() {
+ const dispatch = useDispatch();
+
+  useEffect(() => { 
+    dispatch(fetchNewsApi())
+  },[dispatch])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Suspense fallback={<Navigation/>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/news" element={<NewsPage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+        </Routes>
+    </Suspense>
+      
+
+    </>
+    
   );
 }
 

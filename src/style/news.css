@@ -1,0 +1,19 @@
+.containerNews {
+    margin-top: 65px !important;
+    background-color: rgb(215, 222, 223);
+    padding: 15px;
+}
+
+.newsCard {
+    background-color: rgb(247, 247, 229) !important;
+    margin: 15;
+}
+
+.newsCard:hover {
+    background: linear-gradient(135deg, rgb(239, 241, 222) 57%, rgb(207, 229, 233) 97%);
+    transform: scale(1.01);
+    box-shadow: 0 0 18px rgba(33, 33, 33, 0.2);
+}
+
+
+

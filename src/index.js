@@ -1,17 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import {store} from "./reducer/index"
+import { Auth0Provider } from "@auth0/auth0-react";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const domain = process.env.REACT_APP_AUTH0_DOMAIN
+const clientID = process.env.REACT_APP_AUTH0_CLIENT_ID 
+// const redirectUri = process.env.REACT_APP_AUTH0_CLIENT_ID
+
+
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  
+    <Provider store ={store}>
+      <Router>
+        <Auth0Provider 
+        domain={domain}
+        clientId={clientID}
+        redirectUri={window.location.origin}
+        // redirectUri={redirectUri}
+        >
+          <App />
+        </Auth0Provider>
+      </Router>
+    </Provider>
+  
+  
+  
+    
+
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
