@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import heroImg from "../media/hero_illustration.png";
 import CustomButton from "./CustomButton";
 import Navigation from "./Navigation";
-import i18next from "i18next";
+
 
 const Hero = () => {
   const { t } = useTranslation();

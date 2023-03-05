@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { Provider } from 'react-redux';
 import {store} from "./reducer/index"
@@ -16,16 +16,16 @@ const clientID = process.env.REACT_APP_AUTH0_CLIENT_ID
 root.render(
   
     <Provider store ={store}>
-      <Router>
+      < BrowserRouter >
+      {/* < BrowserRouter basename='/test-news /'> */}
         <Auth0Provider 
         domain={domain}
         clientId={clientID}
         redirectUri={window.location.origin}
-        // redirectUri={redirectUri}
         >
           <App />
         </Auth0Provider>
-      </Router>
+      </ BrowserRouter>
     </Provider>
   
   
